@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{% block content %}
+{% if error %}
+  <p style="color:red;">{{ error }}</p>
+{% else %}
   <h2>Welcome, {{ user.username }}!</h2>
 
   <h3>Your Area:</h3>
@@ -37,8 +32,4 @@
       <li>No mappings assigned yet.</li>
     {% endfor %}
   </ul>
-{% endblock %}
-
-
-</body>
-</html>
+{% endif %}

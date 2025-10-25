@@ -9,6 +9,18 @@ def dashboard(request):
     user = request.user
     area=user.area
 
+    if area is None:
+        context={
+         'user': user,
+        'area': None,
+        'rooms': [],
+        'systems': [],
+        'mappings': [],
+        'error':'No area is assigned to this user'
+
+        }
+        return render(request, 'transaction_app/dashboard.html', context)
+
     rooms=area.rooms.all()
     systems=System.objects.filter(room__area=area)
 

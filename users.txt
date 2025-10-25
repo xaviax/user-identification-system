@@ -5,3 +5,6 @@ password=admin
 --Users--
 username=jaiden
 password=notreallyjaiden123.
+
+username=james
+password=notreallyjames123.
