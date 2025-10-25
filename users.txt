@@ -1,0 +1,7 @@
+--SuperUser--
+username=admin
+password=admin
+
+--Users--
+username=jaiden
+password=notreallyjaiden123.

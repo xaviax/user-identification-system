@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+  <h2>Welcome, {{ user.username }}!</h2>
+
+  <h3>Your Area:</h3>
+  <p>{{ area.name }}</p>
+
+  <h3>Rooms in this Area:</h3>
+  <ul>
+    {% for room in rooms %}
+      <li>{{ room.name }}</li>
+    {% empty %}
+      <li>No rooms found.</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Systems in Your Area:</h3>
+  <ul>
+    {% for system in systems %}
+      <li>{{ system.name }} (Room: {{ system.room.name }})</li>
+    {% empty %}
+      <li>No systems found.</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Your System Access IDs:</h3>
+  <ul>
+    {% for map in mappings %}
+      <li>{{ map.system.name }} → {{ map.system_user_id }}</li>
+    {% empty %}
+      <li>No mappings assigned yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
+</body>
+</html>
