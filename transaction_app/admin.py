@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import *
 # Register your models here.
-
+'''
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
@@ -15,11 +15,11 @@ class CustomUserAdmin(UserAdmin):
 
         super().save_model(request, obj, form, change)
 
+'''
 
 
-admin.site.register(Area)
-admin.site.register(Room)
-admin.site.register(System)
-admin.site.register(UserSystemMap)
+
+
+
 
 

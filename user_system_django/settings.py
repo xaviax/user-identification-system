@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'transaction_app',
+    'accounts',
+    'rooms',
+    'mappings',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -127,4 +131,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'transaction_app.User'
+AUTH_USER_MODEL = 'accounts.User'
